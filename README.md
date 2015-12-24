@@ -1,7 +1,7 @@
 # quickQuery
 Insert and retrieve data dynamically using PDO. It takes care of all the logistics and headache of binding fields and data manually, fields are still binded but they are done instantaneously and dynamically without user interference
 
-Follow the following steps to implement the this usage if you aren’t already familiar with php
+Follow the following steps to implement this usage if you aren’t already familiar with php
 
 #USEAGE Running Demo
 
