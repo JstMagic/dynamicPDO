@@ -1,21 +1,21 @@
 # quickQuery
-Insert and retrieve data dynamically using PDO. It takes care of all the logistics and headache of binding fields and data manualy, fields are still binded but they are done instantaneously and dynamically without user interference
+Insert and retrieve data dynamically using PDO. It takes care of all the logistics and headache of binding fields and data manually, fields are still binded but they are done instantaneously and dynamically without user interference
 
-Follow the following steps to implement the this usage if you arent already farmilier with php
+Follow the following steps to implement the this usage if you aren’t already familiar with php
 
 #USEAGE Running Demo
 
 Step 1
-Download this repository, create a local server and a database of your choice if you dont already have one
+Download this repository, create a local server and a database of your choice if you don’t already have one
 
 Step 2
-Add plugins folder to your server root, eg if you are runing xampp : add to httpdoc and if wampp: add to www and access the folder in 
-your broswer. localhost/quickQuery for a quick demo
+Add plugins folder to your server root, e.g. if you are running xampp : add to httpdoc and if wampp: add to www and access the folder in 
+your browser. localhost/quickQuery for a quick demo
 
-#Usage Implementing in your enviroment / SETUP
+#Usage Implementing in your environment / SETUP
 
 Step 1
-copy the php folder to your project development enviroment and open php/classes/process.php
+Copy the php folder to your project development environment and open php/classes/process.php
 
 Step 2 change the following code
  - Define a database connection 
@@ -30,9 +30,12 @@ Step 2 change the following code
   *where foo@bar is the data you would like to insert in the field; "fields"=>'email
   *Another example, 145.814.964.2 is the ip you would like to insert in the field;"fields"=>ip 
   
- #Specifying an alternative database for different uses, perhabs your mailling list isnt within thesame database as your member table, this class and methods can be called from anywhere
+ #Specifying an alternative database for different uses, perhaps your mailing list isn’t within the same database as your member table, this class and methods can be called from anywhere
  * $dbInfo = array('DB_HOST'=>'localhost','DB_NAME'=>'user_db','DB_USER'=>'root','DB_PASSWORD'=>'testing');
  * $process->quickQuery("foo@bar.com","145.814.964.2", 547g7recv24s5fd47sf54s, 2015-11-2015, array('db'=>$dbInfo, table'=>'subscribers',"fields"=>'email, ip_address, unsubscribe_key, added_on'));
  * if a database isnt specified it would use the default database.
  
 other bits and pieces added that may be of use, such as strict email validation, not so strong text validation, isSubscribed function. Alot more useful things to be added in due time.
+
+#Note
+If you are experiencing issues, check that this file exists ('php/classes/db/db.bindParam.php) and giving the appropriate permissions
