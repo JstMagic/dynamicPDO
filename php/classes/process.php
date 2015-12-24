@@ -55,9 +55,9 @@ class process
             $pass = $this->DB_PASSWORD;
         }
         try {
-            $this->pdo = new PDO("mysql:host=$host;dbname=$name", $user, $pass);
+            $this->pdo = new PDO("mysql:host=$host;dbname=$name;charset=utf8", $user, $pass);
             //@var $HOST setup the database connection
-            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION, PDO::ATTR_EMULATE_PREPARES, false);
             $this->success = true;
             //return true if successful
             $this->statusMessage = "<div style='width: 100%; margin: 0 auto; padding: 2%;box-shadow: 0 0 5px #ccc; height: auto; color:#ff4722'><h1>SUCCESSFUL</h1></div>";
