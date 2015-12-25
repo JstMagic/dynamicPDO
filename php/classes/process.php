@@ -57,7 +57,14 @@ class process
         try {
             $this->pdo = new PDO("mysql:host=$host;dbname=$name;charset=utf8", $user, $pass);
             //@var $HOST setup the database connection
-            $this->pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+
+            /** for more security use  
+            $this->pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false) rather than
+            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);  
+            *but you wont have the lovely error messages, or wouldn't know what's wrong as the error could point to many different things,
+            *only use this if you are sure everything works fine and you are unlikely to encounter any error, its not advisable to use if you are debugging  
+            **/
+            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);           
             $this->success = true;
             //return true if successful
             $this->statusMessage = "<div style='width: 100%; margin: 0 auto; padding: 2%;box-shadow: 0 0 5px #ccc; height: auto; color:#ff4722'><h1>SUCCESSFUL</h1></div>";
