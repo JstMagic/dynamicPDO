@@ -59,12 +59,11 @@ class process
             //@var $HOST setup the database connection
 
             /** for more security use
-             * 
-             * 
+             *
             $this->pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false) rather than
-             * 
-             * 
+             *
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+             * 
              * but you wont have the lovely error messages, or wouldn't know what's wrong as the error could point to many different things,
              *only use this if you are sure everything works fine and you are unlikely to encounter any error, its not advisable to use if you are debugging
             **/
