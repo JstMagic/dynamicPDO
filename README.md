@@ -19,10 +19,13 @@ Copy the php folder to your project development environment and open php/classes
 
 Step 2 change the following code
  - Define a database connection 
-  - private $DB_HOST =     "Whatever server";
-  - private $DB_NAME =     "whatever databse name";
-  - private $DB_USER =     "Whatever username";
-  - private $DB_PASSWORD = 'Whatever Password';
+ - 
+ ```php
+  private $DB_HOST =     "Whatever server";
+  private $DB_NAME =     "whatever databse name";
+  private $DB_USER =     "Whatever username";
+  private $DB_PASSWORD = 'Whatever Password';
+  ```
   
   Step 3 call the $process object class where you would like to use it
 #Using default database specified within the class, this can be a general use database
