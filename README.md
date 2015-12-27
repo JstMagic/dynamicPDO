@@ -41,7 +41,8 @@ Step 2 change the following code
  $dbInfo = array('DB_HOST'=>'localhost','DB_NAME'=>'user_db','DB_USER'=>'root','DB_PASSWORD'=>'testing');
  $process->quickQuery("foo@bar.com","145.814.964.2", 547g7recv24s5fd47sf54s, 2015-11-2015, array('db'=>$dbInfo, table'=>'subscribers',"fields"=>'email, ip_address, unsubscribe_key, added_on'));
  ```
- * if a database isnt specified it would use the default database.
+* a variable that holds the array of the database connection '$dbInfo' was then passed into quickQuery(..., array('db'=>$dbInfo, ...)
+* if a database isnt specified it would use the default database.
  
 other bits and pieces added that may be of use, such as strict email validation, not so strong text validation, isSubscribed function. Alot more useful things to be added in due time.
 
