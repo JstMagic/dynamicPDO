@@ -29,7 +29,7 @@ Step 2 change the following code
 ```php
  $process->quickQuery("foo@bar.com","145.814.964.2", 547g7recv24s5fd47sf54s, 2015-11-2015, array('table'=>'subscribers',"fields"=>'email, ip_address, unsubscribe_key, added_on'));
  ```
- * where foo@bar is the data you would like to insert in the field; "fields"=>'email
+ * where foo@bar is the data you would like to insert in the field; "fields"=>'email and so forth
  * Another example, 145.814.964.2 is the ip you would like to insert in the field;"fields"=>ip 
   
  # Specifying an alternative database for different uses, perhaps your mailing list isn’t within the same database as your member     table, this class and methods can be called from anywhere
