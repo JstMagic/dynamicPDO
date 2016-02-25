@@ -3,7 +3,7 @@ Insert and retrieve data dynamically using PDO. It takes care of all the logisti
 
 Follow the following steps to implement this usage if you aren’t already familiar with php
 
-#USEAGE Running Demo
+#Running Demo
 
 Step 1
 Download this repository, create a local server and a database of your choice if you don’t already have one
